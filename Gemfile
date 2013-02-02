@@ -22,6 +22,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'rails-boilerplate'
 
 group :test do
   gem 'capybara'
