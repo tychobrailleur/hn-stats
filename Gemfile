@@ -23,6 +23,7 @@ end
 
 gem 'jquery-rails'
 gem 'rails-boilerplate'
+gem 'bootstrap-sass'
 
 group :test do
   gem 'capybara'
