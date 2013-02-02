@@ -1,3 +1,15 @@
+GIT
+  remote: git://github.com/tychobrailleur/hn-api.git
+  revision: 979ab73bd1f0af6afda130eae10bdf4f1aabb66a
+  branch: master
+  specs:
+    hn-api (0.0.1)
+      faraday
+      faraday_middleware
+      hashie
+      jruby-openssl
+      rake
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -68,12 +80,17 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    faraday (0.8.4)
+      multipart-post (~> 1.1)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
     ffi (1.3.1)
     ffi (1.3.1-java)
     gherkin (2.11.6)
       json (>= 1.7.6)
     gherkin (2.11.6-java)
       json (>= 1.7.6)
+    hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.1)
     jdbc-sqlite3 (3.7.2.1)
@@ -104,6 +121,7 @@ GEM
       rspec (>= 2.9)
     moped (1.3.2)
     multi_json (1.5.0)
+    multipart-post (1.1.5)
     nokogiri (1.5.6)
     nokogiri (1.5.6-java)
     origin (1.0.11)
@@ -194,6 +212,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   cucumber-rails (= 1.3.0)
   database_cleaner (= 0.9.1)
+  hn-api!
   jquery-rails
   jruby-openssl
   mongoid (~> 3.0.0)

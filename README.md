@@ -14,6 +14,10 @@ There are a few gems to connect to Hacker News out there;
 
 ### Scheduled Task
 
+See https://www.ruby-toolbox.com/categories/scheduling
+
+
+
 ### Stats Persistence
 
 Using mongoid.  Stats are held in the `Stat` model, which also embeds the posts (`Post` model) used for the stats.

@@ -34,6 +34,10 @@ gem 'rails-boilerplate'
 gem 'bootstrap-sass'
 gem 'mongoid', '~> 3.0.0'
 
+# As RubyGems is read-only these days, get gem from github.
+# See http://gembundler.com/git.html
+gem 'hn-api', github: 'tychobrailleur/hn-api', branch: 'master'
+
 group :test do
   gem 'capybara'
   gem 'cucumber-rails', '1.3.0', :require => false
