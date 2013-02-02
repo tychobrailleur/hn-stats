@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
+  gem 'mongoid-rspec', '~> 1.6.0'
 end
 
 gem 'activerecord-jdbcsqlite3-adapter'
