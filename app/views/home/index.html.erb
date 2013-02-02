@@ -1,2 +1,15 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+  <div class="span8">
+    <h1>Stats</h1>
+    <h2>Average: <span id="average"><%= @stat.average %></span></h2>
+    <h2>Median: <span id="median"><%= @stat.median %></span></h2>
+    <h2>Mode: <span id="mode"><%= @stat.mode %></span></h2>
+  </div>
+  <div class="span4">
+    <h3>Latest Posts</h3>
+    <% @stat.posts.each do |p| %>
+      <h4><a href="<%= p.url %>"><%= p.title %></a></h4>
+      <p>Points: <%= p.points %></p>
+    <% end %>
+  </div>
+</div>
