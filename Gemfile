@@ -24,6 +24,7 @@ end
 gem 'jquery-rails'
 gem 'rails-boilerplate'
 gem 'bootstrap-sass'
+gem 'mongoid', '~> 3.0.0'
 
 group :test do
   gem 'capybara'
