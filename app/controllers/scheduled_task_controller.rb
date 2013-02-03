@@ -8,6 +8,7 @@ class ScheduledTaskController < ApplicationController
     latest = HnNews.latest
     stats = compute_stats(latest)
     store_stats(stats, latest)
+    NewsMailer.update_email(stats, latest)
   end
 
   def compute_stats(news)

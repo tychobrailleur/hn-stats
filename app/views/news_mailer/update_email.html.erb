@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Latest Hacker News Stats</h1>
+    <p>Average: <%= @stats[0] %>, Median: <%= @stats[1] %>, Mode: <%= @stats[2] %></p>
+    <ul>
+    <% @items.each do |n| %>
+      <li><a href="<%= n.url %>"><%= n.title %> (<%= n.points %>)</a></li>
+    <% end %>
+    </ul>
+    <p>Enjoy!</p>
+  </body>
+</html>
