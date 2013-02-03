@@ -30,13 +30,22 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+# To make UI nice.
 gem 'rails-boilerplate'
 gem 'bootstrap-sass'
+
+# MongoDB persistence
 gem 'mongoid', '~> 3.0.0'
 
 # As RubyGems is read-only these days, get gem from github.
 # See http://gembundler.com/git.html
 gem 'hn-api', github: 'tychobrailleur/hn-api', branch: 'master'
+
+# Scheduled tasks, see config/initializers/task_scheduler.rb
+gem 'rufus-scheduler'
+
+gem 'hashie'
 
 group :test do
   gem 'capybara'

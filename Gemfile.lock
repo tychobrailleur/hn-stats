@@ -166,6 +166,8 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.11.0)
     rubyzip (0.9.9)
+    rufus-scheduler (2.0.17)
+      tzinfo (>= 0.3.23)
     sass (3.2.5)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -212,6 +214,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   cucumber-rails (= 1.3.0)
   database_cleaner (= 0.9.1)
+  hashie
   hn-api!
   jquery-rails
   jruby-openssl
@@ -220,6 +223,7 @@ DEPENDENCIES
   rails (= 3.2.11)
   rails-boilerplate
   rspec-rails (= 2.11.0)
+  rufus-scheduler
   sass-rails (~> 3.2.3)
   shoulda-matchers
   sqlite3
