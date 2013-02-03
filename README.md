@@ -26,6 +26,10 @@ See https://www.ruby-toolbox.com/categories/scheduling
 
 Using mongoid.  Stats are held in the `Stat` model, which also embeds the posts (`Post` model) used for the stats.
 
+### Mocking Web Service
+
+I am using a mocked version of the api to avoid hammering the real site when testing. This mocked service is a Sinatra app that returns a static version of the HN API output.
+
 
 ### TODO
 
