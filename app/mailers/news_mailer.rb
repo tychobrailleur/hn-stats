@@ -1,9 +1,8 @@
 class NewsMailer < ActionMailer::Base
   default from: "sebastien@weblogism.com"
 
-  def update_email(stats, items)
-    @stats = stats 
-    @items = items
+  def update_email(stats)
+    @stats = stats
 
     mail(to: "sebastien@weblogism.com",
          subject: "[HnStats] Latest News")

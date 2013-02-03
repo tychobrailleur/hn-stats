@@ -16,10 +16,12 @@ describe ScheduledTaskController do
   describe "Get HN News" do
 
     it "calls latest" do
+      foo = mock("stats")
       HnNews.should_receive(:latest).and_return(:foo)
       subject.should_receive(:compute_stats).with(:foo).and_return(:bar)
       subject.should_receive(:store_stats).with(:bar, :foo)
-      NewsMailer.should_receive(:update_email).with(:bar, :foo)
+      Stat.should_receive(:last).and_return(:qux)
+      NewsMailer.should_receive(:update_email).with(:qux)
       
       subject.execute!
     end

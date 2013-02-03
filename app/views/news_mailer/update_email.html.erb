@@ -5,9 +5,9 @@
   </head>
   <body>
     <h1>Latest Hacker News Stats</h1>
-    <p>Average: <%= @stats[0] %>, Median: <%= @stats[1] %>, Mode: <%= @stats[2] %></p>
+    <p>Average: <%= @stats.average %>, Median: <%= @stats.median %>, Mode: <%= @stats.mode %></p>
     <ul>
-    <% @items.each do |n| %>
+    <% @stats.posts.each do |n| %>
       <li><a href="<%= n.url %>"><%= n.title %> (<%= n.points %>)</a></li>
     <% end %>
     </ul>

@@ -3,14 +3,18 @@ require "spec_helper"
 describe NewsMailer do
   describe "update email" do
 
-    let (:stats) { mock("stats") }
-    let (:items) { mock("items") }
-    subject { NewsMailer.update_email(stats, items) }
+    let (:stats) { mock(:stat) }
+    subject { NewsMailer.update_email(stats) }
 
     # For some reason, the mocks cannot be used in a before(:all) block.
     def mock_calls
-      stats.should_receive(:[]).exactly(3).times
-      items.should_receive(:each)
+      posts = mock(:post)
+
+      stats.should_receive(:average)
+      stats.should_receive(:median)
+      stats.should_receive(:mode)
+      stats.should_receive(:posts).and_return(posts)
+      posts.should_receive(:each)
     end
 
     it "defines a proper subject" do
